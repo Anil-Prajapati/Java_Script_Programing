@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // convert array of letters to array of words
+        const inputArr = [
+            'b', 'a', 'k', 'e', '',
+            'c', 'a', 'k', 'e', '',
+            'e', 'a', 't'
+        ];
+        var outputArr = [];
+        var word = '';
+        // Iterate over the array.
+        for (let i = 0; i < inputArr.length; i++) {
+            if (inputArr[i] == '') {
+                // If you found the empty Space(''), add to the outputArr
+                outputArr.push(word);
+                // reset the word, to start making the new word.
+                word = '';
+                // No need to execute the below code, so continue.
+                continue;
+            }
+            // Keep appending the character to the word.
+            word = word.concat(inputArr[i]);
+        }
+        // This is for the last word string.
+        if (word != '') {
+            outputArr.push(word);
+        }
+        console.log(outputArr);
+    </script>
+</body>
+
+</html>

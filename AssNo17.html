@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // add Dept info for each employee
+        employees = [{
+            eId: 101,
+            name: "sanjay",
+            sal: 5000,
+            gender: "male"
+        }, {
+            eId: 104,
+            name: "reena",
+            sal: 8000,
+            gender: "female"
+        }]
+        departments = [{
+            eId: 101,
+            dept: "sales"
+        }, {
+            eId: 104,
+            dept: "marketing"
+        }]
+        const emp = employees.map(e => ({
+            eId: e.eId,
+            ename: e.name,
+            salary: e.sal,
+            Geneder: e.gender,
+
+            Dept: dept.find(d => d.eId === e.eId).dept
+        }));
+        console.log(emp);
+    </script>
+</body>
+
+</html>
